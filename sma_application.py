@@ -20,8 +20,8 @@ def construct_signals(data, short_period, long_period):
      data['Long SMA']= data['Price'].rolling(window=long_period).mean()
 
      # removing na values
-     data = data.dropna()
-     print(data)
+     #data = data.dropna()  # better to drop na in future steps
+     #print(data)
 
 ## plotting data and SMA
 def plot_data(data):
@@ -32,7 +32,7 @@ def plot_data(data):
     plt.plot( data['Long SMA'], label='Long SMA', color= 'blue' )
     plt.xlabel('Date')
     plt.ylabel('Stock Price')
-    plt.title( 'SMA Example')
+    plt.title( 'Moving Average (MA) Indicators')
     plt.show()
 
 if __name__ == '__main__':
@@ -43,5 +43,9 @@ if __name__ == '__main__':
     stock_data = download_data('IBM', start, end) 
     
     construct_signals(stock_data, 30,200)
+
+    stock_data = stock_data.dropna()  ## avoid na's in plot
+
+    print(stock_data)
 
     plot_data(stock_data)
