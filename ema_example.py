@@ -44,6 +44,7 @@ def plot_data(data):
     plt.xlabel('Date')
     plt.ylabel('Stock Price')
     plt.title( 'Exponential Moving Average (MA) Indicators')
+    plt.legend(loc="upper left")
     plt.show()
 
 if __name__ == '__main__':

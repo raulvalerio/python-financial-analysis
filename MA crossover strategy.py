@@ -71,6 +71,7 @@ class MovingAverageCrossover:
         plt.title("Moving Average (MA) Crossover Trading Strategy for " + self.stock)
         plt.xlabel('Date')
         plt.ylabel('Stock Price')
+        plt.legend(loc="upper left")
         plt.show()
 
 
