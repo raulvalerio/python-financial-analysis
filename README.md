@@ -3,7 +3,7 @@
 ### Content
 
 - Trading theory
-- Simple Moving Average
+- Moving Average:  Simple, exponential and crossover strategy
 - Monte carlo Simulations
 
 ### Tools
